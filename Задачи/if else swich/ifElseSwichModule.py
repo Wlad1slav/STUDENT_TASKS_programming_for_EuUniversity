@@ -50,36 +50,74 @@ def lagest_number_of_three_digits(num1, num2, num3):
 def rook(x1, y1, x2, y2):
     x1-=1; y1-=1; x2-=1; y2-=1 #костыль
     field = [
-        [0,0,0,0],
-        [0,0,0,0]
+        [0,1,0,1,0,1,0,1],#8
+        [1,0,1,0,1,0,1,0],#7
+        [0,1,0,1,0,1,0,1],#6
+        [1,0,1,0,1,0,1,0],#5
+        [0,1,0,1,0,1,0,1],#4
+        [1,0,1,0,1,0,1,0],#3
+        [0,1,0,1,0,1,0,1],#2
+        [1,0,1,0,1,0,1,0],#1
+        #A B C D E F G H
     ]
-    for i in range(2):
-        for j in range(4):
+    for i in range(8):
+        for j in range(8):
             if i == y1 and j == x1: print("♜", end = ' ')    #Ладья
             elif i == y2 and j == x2: print("♟", end = ' ')  #Жертва
             else: print(field[i][j], end = ' ')
         print()
-    if (x1 == x2) or (x1 - 1 == x2) or (x2 - 1 == x1): print("YES") #Ням-ням
+    if (x1 == x2) or (y1 == y2): print("YES") #Ням-ням
     else: print("NO")
 
 ####################
-# Завдання 8. Слон #
+# Завдання 8. Слон # #Minute revelations, не сам понял, что нужен модуль числа
 ####################
 def elephant(x1, y1, x2, y2):
     x1-=1; y1-=1; x2-=1; y2-=1
     field = [
-        [0,0,0,0],
-        [0,0,0,0]
+        [0,1,0,1,0,1,0,1],#8
+        [1,0,1,0,1,0,1,0],#7
+        [0,1,0,1,0,1,0,1],#6
+        [1,0,1,0,1,0,1,0],#5
+        [0,1,0,1,0,1,0,1],#4
+        [1,0,1,0,1,0,1,0],#3
+        [0,1,0,1,0,1,0,1],#2
+        [1,0,1,0,1,0,1,0],#1
+        #A B C D E F G H
     ]
-    for i in range(2):
-        for j in range(4):
+    for i in range(8):
+        for j in range(8):
             if i == y1 and j == x1: print("♝", end = ' ')    #Слон
             elif i == y2 and j == x2: print("♟", end = ' ')  #Жертва
             else: print(field[i][j], end = ' ')
         print()
-    if (x1 + 1 == x2 and y1 + 1 == y2) or (x1 - 1 == x2 and y1 + 1 == y2) or (x2 + 1 == x1 and y2 + 1 == y1) or (x2 - 1 == x1 and y2 + 1 == y1): print("YES")
+    if abs(x1 - x2) == abs(y1 - y2): print("YES")
     else: print("NO")
 
+#####################
+# Завдання 9. Ферзь #
+#####################
+def queen(x1, y1, x2, y2):
+    x1-=1; y1-=1; x2-=1; y2-=1
+    field = [
+        [0,1,0,1,0,1,0,1],#8
+        [1,0,1,0,1,0,1,0],#7
+        [0,1,0,1,0,1,0,1],#6
+        [1,0,1,0,1,0,1,0],#5
+        [0,1,0,1,0,1,0,1],#4
+        [1,0,1,0,1,0,1,0],#3
+        [0,1,0,1,0,1,0,1],#2
+        [1,0,1,0,1,0,1,0],#1
+        #A B C D E F G H
+    ]
+    for i in range(8):
+        for j in range(8):
+            if i == y1 and j == x1: print("♛", end = ' ')    #Слон
+            elif i == y2 and j == x2: print("♟", end = ' ')  #Жертва
+            else: print(field[i][j], end = ' ')
+        print()
+    if (abs(x1 - x2) == abs(y1 - y2)) or ((x1 == x2) or (y1 == y2)): print("YES")
+    else: print("NO")
 
 
 if __name__ == "__main__": 
