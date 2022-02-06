@@ -162,12 +162,34 @@ def horse(x1, y1, x2, y2):
     ]
     for i in range(8):
         for j in range(8):
-            if i == y1 and j == x1: print("♞", end = ' ')    #Король
+            if i == y1 and j == x1: print("♞", end = ' ')    #Конь
             elif i == y2 and j == x2: print("X", end = ' ')  #Жертва
             else: print(field[i][j], end = ' ')
         print()
     if (x1 + 1 == x2 and y1 + 2 == y2) or (x1 - 1 == x2 and y1 + 2 == y2) or (x1 + 2 == x2 and y1 + 1 == y2) or (x1 - 2 == x2 and y1 + 1 == y2) or (x1 - 2 == x2 and y1 - 1 == y2) or (x1 + 2 == x2 and y1 - 1 == y2): print("YES")
     else: print("NO") 
+
+##########################
+# Завдання 12. Шоколадка #
+##########################
+def chocolate(N, M, K): #N x M - размер шоколада. K - кол-во квадратиков шоколадки
+    if ((K % N == 0) or (K % M == 0)) and K < N * M: print("YES")
+    else: print("NO")
+
+######################
+# Завдання 13. Фішки #
+######################
+def chips(chips):
+    if (chips % 4 == 0): print("YES")
+    else: print("NO")
+
+#########################
+# Завдання 14. Рівняння #
+#########################
+def equation(a, b): #a*x+b=0
+    if (a == 0) or (b % a != 0): print("NO")
+    elif a == 0 and b == 0: print("INF")
+    else: print(-b / a)
 
 
 if __name__ == "__main__": 
