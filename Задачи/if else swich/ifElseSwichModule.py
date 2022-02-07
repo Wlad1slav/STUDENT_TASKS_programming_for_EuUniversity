@@ -191,6 +191,15 @@ def equation(a, b): #a*x+b=0
     elif a == 0 and b == 0: print("INF")
     else: print(-b / a)
 
+#################################
+# Завдання 15. Складне рівняння #
+#################################
+def complex_equation(a, b, c, d):
+    if b % a == 0:
+        print(-b / a)
+    elif a == 0 and b == 0: print("INF")
+    else: print("NO")
+
 
 if __name__ == "__main__": 
     print("Use main.py, bla-bla-bla")

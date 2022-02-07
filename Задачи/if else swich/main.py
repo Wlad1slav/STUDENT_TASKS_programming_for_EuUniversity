@@ -14,4 +14,5 @@ import ifElseSwichModule as MMM
 # MMM.horse(3, 2, 5, 3)
 # MMM.chocolate(3, 2, 4)
 # MMM.chips(20)
-MMM.equation(1, 1)
+# MMM.equation(1, 1)
+# MMM.complex_equation(1, 1, 2, 2)
