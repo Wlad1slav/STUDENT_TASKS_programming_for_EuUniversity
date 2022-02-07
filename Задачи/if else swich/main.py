@@ -16,3 +16,5 @@ import ifElseSwichModule as MMM
 # MMM.chips(20)
 # MMM.equation(1, 1)
 # MMM.complex_equation(1, 1, 2, 2)
+
+MMM.rest(5, 5, 6, 5)

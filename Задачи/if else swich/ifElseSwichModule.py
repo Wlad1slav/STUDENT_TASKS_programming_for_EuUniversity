@@ -200,6 +200,25 @@ def complex_equation(a, b, c, d):
     elif a == 0 and b == 0: print("INF")
     else: print("NO")
 
+######################
+# Завдання 16. Решта #
+######################
+def rest(price_rub, price_coins, paid_rub, paid_coins):
+    if (paid_rub > price_rub) or ((paid_rub == price_rub) and (paid_coins > price_coins)):
+        
+        rest_rub = paid_rub - price_rub
+        rest_coins = paid_coins - price_coins
+
+        if rest_coins >= 100:   #конвертация копеек
+            rest_rub += (rest_coins / 100)
+            rest_coins %= 100
+
+        print(int(rest_rub), rest_coins)
+
+    else: print("None") #если цена выше оплаты
+    
+
+
 
 if __name__ == "__main__": 
     print("Use main.py, bla-bla-bla")
