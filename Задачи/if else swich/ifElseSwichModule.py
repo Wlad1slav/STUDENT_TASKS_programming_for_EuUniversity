@@ -16,7 +16,9 @@ def leap_year(year):
 ################################
 # Завдання 3. Тестуюча система #
 ################################
-#-
+def test(num1, num2):
+    if (num1 == 1 and num2 == 1) or (num1 != 1 and num2 !=1 ): print("YES")
+    else: print("NO")
 
 ##########################
 # Завдання 4. Знак числа #
@@ -217,6 +219,21 @@ def rest(price_rub, price_coins, paid_rub, paid_coins):
 
     else: print("None") #если цена выше оплаты
     
+#########################
+# Завдання 17. Морозиво #
+#########################
+def ice_cream(value):
+    if value == 3 or value == 5: print("YES")
+    else: print("NO")
+
+########################
+# Завдання 18. Котлети #
+########################
+def cutlets(k, m, n):
+    if n * 2 % k == 0: time = m * (n * 2 / k)
+    elif k >= n: time = m * 2
+    else: time = m * ((n * 2 / k) + 1)
+    print(time)
 
 
 
