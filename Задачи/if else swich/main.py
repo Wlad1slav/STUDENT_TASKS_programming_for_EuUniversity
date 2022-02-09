@@ -1,6 +1,8 @@
 import ifElseSwichModule as MMM
 
-
+#################
+# IF ELSE SWICH #
+#################
 # MMM.lagest_number(10, 2) #1
 # MMM.leap_year(1999) #2
 # MMM.test(1, -11)
@@ -19,5 +21,7 @@ import ifElseSwichModule as MMM
 # MMM.rest(5, 5, 6, 5) #16
 # MMM.ice_cream(4) #17
 # MMM.cutlets(1, 5, 1) #18
+# MMM.equality(9, 0, 2) #19
+MMM.cows(32)
 
 
