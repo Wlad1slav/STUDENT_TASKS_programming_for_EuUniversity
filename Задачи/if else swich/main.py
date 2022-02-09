@@ -3,7 +3,7 @@ import ifElseSwichModule as MMM
 
 # MMM.lagest_number(10, 2) #1
 # MMM.leap_year(1999) #2
-MMM.test(3, 1)
+# MMM.test(1, -11)
 # MMM.sign(23) #4
 # MMM.lagest_number_again(30, 40) #5
 # MMM.lagest_number_of_three_digits(10, 20, 3) #6

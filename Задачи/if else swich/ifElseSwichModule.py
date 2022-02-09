@@ -16,8 +16,12 @@ def leap_year(year):
 ################################
 # Завдання 3. Тестуюча система #
 ################################
+# def test(num1, num2):
+#     if (num1 == 1 and num2 == 1) or (num1 != 1 and num2 !=1 ): print("YES")
+#     else: print("NO")
+
 def test(num1, num2):
-    if (num1 == 1 and num2 == 1) or (num1 != 1 and num2 !=1 ): print("YES")
+    if abs(num1) % 10 == abs(num2) or int(num1) / 10 == abs(num2) or abs(num1) == abs(num2) or abs(num2) % 10 == abs(num1) or int(num2) / 10 == abs(num1): print("YES")
     else: print("NO")
 
 ##########################
