@@ -1,4 +1,4 @@
-import ifElseSwichModule as MMM
+import ifElseSwichLib as MMM
 
 #################
 # IF ELSE SWICH #
