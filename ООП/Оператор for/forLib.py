@@ -1,5 +1,3 @@
-import math
-
 ################
 # Оператор for #
 ################
@@ -92,8 +90,96 @@ def squares(a, b):
 ##############################
 # Завдання 10. Цифра в числі #
 ##############################
-#-
+def digit_in_number(x, d):
+    if 0 <= d and d <= 9:
+        digits = []; val = 0
+        while x > 0:
+            digits.append(x % 10)
+            x //= 10
+        digits.reverse()
+        for i in digits:
+            if d == i: val += 1
+        print(val)       
+    
+##########################
+# Завдання 11. Сума цифр #
+##########################
+def sum_of_digits(x):
+    sum = 0; digits = []
+    while x > 0:
+        digits.append(x % 10)
+        x //= 10
+    for i in digits:
+        sum += i
+    print(sum)
+    
+################################
+# Завдання 12. Переверни число #
+################################
+def reverse_num(x):
+    digits = []
+    while x > 0:
+        digits.append(x % 10)
+        x //= 10
+    #digits.reverse()
+    for i in digits: print(i, end='')
+    print()
+    
+####################################
+# Завдання 13. Мінімальний дільник #
+####################################
+def min_div(x):
+    min = 0
+    for i in range(x+1):
+        if i != 0 and i != 1 and x % i == 0 and min == 0: min = i
+    print(min)
 
+###############################
+# Завдання 14. Дільники числа #
+###############################
+def all_div(x):
+    for i in range(x+1):
+        if i != 0 and x % i == 0: print(i, end=' ')
+    print()
+
+####################################
+# Завдання 15. Кількість дільників #
+####################################
+def num_of_div(x):
+    val = 0
+    for i in range(x+1):
+        if i != 0 and x % i == 0: val += 1
+    print(val)
+
+#########################
+# Завдання 16. Сума ста #
+#########################
+def sum_of_hundred(x):
+    if 100 <= x and x <= 999:
+        digits = []; sum = 0
+        while x > 0:
+            digits.append(x % 10)
+            x //= 10
+        for i in digits: sum += i
+        print(sum)
+
+###########################
+# Завдання 17. Сума чисел #
+###########################
+def sum_of_digits_again(x):
+    if 100 <= x and x <= 999:
+        digits = []; sum = 0
+        while x > 0:
+            digits.append(x % 10)
+            x //= 10
+        for i in digits: sum += i
+        print(sum)
+        
+###############################
+# Завдання 18. Переклад числа #
+###############################
+def binary_decimal(x):
+    print(int(x, 2))
 
 
 
