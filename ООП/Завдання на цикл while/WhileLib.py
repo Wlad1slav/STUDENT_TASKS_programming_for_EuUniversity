@@ -171,6 +171,45 @@ def sequence_second_max():
         elif num > max2: max2 = num
     print(f"\n{max2}")
 
+####################################
+# Завдання 19. Другий максимум – 2 #
+####################################
+def sequence_second_max_again():
+    num = int(input())
+    max = num; max2 = 0
+    while num != 0:
+        num = int(input())
+        if num > max: 
+            max2 = max
+            max = num
+        elif num > max2: max2 = num
+    print(f"\n{max2}")
+
+#########################################################
+# Завдання 20-21. Кількість елементів, рівних максимуму #
+#########################################################
+def sequence_sum_maxs():
+    num = int(input())
+    max = num; value = 0
+    while num != 0:
+        num = int(input())
+        if num > max: 
+            max = num
+            value = 0
+        if num == max: value += 1
+    print(f"\n{value}")
+
+#######################################
+# Завдання 22. Сума послідовності - 2 #
+#######################################
+def sequence_sum_zero_zero():
+    num = int(input())
+    sum = 0
+    while num != 0:
+        sum += num
+        num = int(input())
+        if num == 0: num = int(input())
+    print(f"\n{sum}")
 
 
 if __name__ == "__main__": 

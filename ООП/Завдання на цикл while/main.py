@@ -14,4 +14,6 @@ import WhileLib as MMM
 # MMM.sequence_average()
 # MMM.sequence_paired()
 # MMM.sequence_max()
-MMM.sequence_second_max()
+# MMM.sequence_second_max()
+# MMM.sequence_sum_maxs()
+MMM.sequence_sum_zero_zero()
