@@ -178,8 +178,82 @@ def sum_of_digits_again(x):
 ###############################
 # Завдання 18. Переклад числа #
 ###############################
-def binary_decimal(x):
-    print(int(x, 2))
+def binary_decimal(x): print(int(x, 2))
+
+#####################
+# Завдання 19. Нулі #
+#####################
+def zeroes(n1, n2, n3, n4):
+    nums = [n1, n2, n3, n4]; value = 0
+    for i in nums:
+        if i == 0: value += 1
+    print(value)
+
+#################################
+# Завдання 20. Підрахунок чисел #
+#################################
+def counting_numbers (n1, n2, n3, n4, n5, n6):
+    nums = [n1, n2, n3, n4, n5, n6]
+    valueZero = 0; valuePlus = 0; valueMinus = 0
+    for i in nums:
+        if i == 0: valueZero += 1
+        elif i > 0: valuePlus += 1
+        else: valueMinus += 1
+    print(valueZero, valuePlus, valueMinus)
+    
+################################
+# Завдання 21. Нуль чи не нуль #
+################################
+def zero_or_no(num1, num2, num3):
+    thereszero = False
+    nums = [num1, num2, num3]
+    for i in nums:
+        if i == 0: thereszero = True
+    print(thereszero)
+    
+#######################################
+# Завдання 22. Рівняння за зростанням #
+#######################################
+def equation_for_growth(a, b, c, d):
+    thereissolution = False
+    for x in range(1000):
+        if a * x ** 3 + b * x ** 2 + c * x + d == 0: 
+            print(x, end=' ')
+            thereissolution = True
+    if thereissolution == False: print("Нет решения")
+    else: print()
+    
+######################################
+# Завдання 23. Рівняння за спаданням #
+######################################
+def equation_for_descending(a, b, c, d):
+    thereissolution = False
+    solving = []
+    
+    for x in range(1000):
+        if a * x ** 3 + b * x ** 2 + c * x + d == 0: 
+            solving.append(x)
+            thereissolution = True
+            
+    if thereissolution == False: print("Нет решения")
+    else: 
+        solving.reverse()
+        for i in solving: print(i, end=' ')
+    print()
+
+#######################
+# Завдання 24. ДНЧЕ-1 #
+#######################
+def DNCHE(seconds):
+    digits = 0
+    for nums in range(seconds):
+        for i in range(nums):
+            print(nums, end=' ')
+            digits+=1
+            if digits >= seconds: break 
+        if digits >= seconds: break
+    #print(f"\n\n{digits}") #проверка
+    print()
 
 
 
