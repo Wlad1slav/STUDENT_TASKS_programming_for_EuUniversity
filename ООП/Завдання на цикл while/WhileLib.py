@@ -211,6 +211,49 @@ def sequence_sum_zero_zero():
         if num == 0: num = int(input())
     print(f"\n{sum}")
 
+########################################################################
+# Завдання 23. Максимальна кількість рівних елементів, що йдуть підряд #
+########################################################################
+def sequence_row():
+    num = int(input())
+    value = 1; last = 0
+    while num != 0:
+        if last == num: value += 1
+        last = num
+        num = int(input())
+    if value == 1: value = 0
+    print(f"\n{value}")
+
+##########################################################
+# Завдання 24. Максимальна довжина монотонного фрагмента #
+##########################################################
+def sequence_row_again():
+    num = int(input())
+    value = 1; last = 0
+    while num != 0:
+        if last == num: value += 1
+        last = num
+        num = int(input())
+    if value == 1: value = 0
+    print(f"\n{value}")
+
+###############################################
+# Завдання 25. Кількість локальних максимумів #
+###############################################
+def sequence_num_max():
+    num = int(input())
+    max = num; value = 0
+    
+    while num != 0:
+        num = int(input())
+        if num > max: 
+            max = num
+            value = 0
+        elif num == max: 
+            if value == 0: value += 2
+            else: value += 1
+    print(f"\n{value}")
+
 
 if __name__ == "__main__": 
     print("Use main.py, bla-bla-bla")
