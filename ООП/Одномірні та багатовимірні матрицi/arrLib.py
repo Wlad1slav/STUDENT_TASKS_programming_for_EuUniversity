@@ -111,19 +111,139 @@ def line(digits):
             return len(previus)
 
 def lineArr(petja_height):
-        print("Завдання 12:", end=' ')
-        line = [165, 163, 160, 160, 157, 157, 155, 154]
-        petja_found_place = False
-        for person_height in line:
-            if petja_height > person_height and petja_height != person_height and petja_found_place == False: 
-                line.insert(line.index(person_height), petja_height)
-                petja_found_place = True
+    print("Завдання 12:", end=' ')
+    line = [165, 163, 160, 160, 157, 157, 155, 154]
+    petja_found_place = False
+    for person_height in line:
+        if petja_height > person_height and petja_height != person_height and petja_found_place == False: 
+            line.insert(line.index(person_height), petja_height)
+            petja_found_place = True
 
-        return line.index(petja_height) + 1
-                    
+    return line.index(petja_height) + 1
+
+def balls(digits, result = 0):
+    print("Завдання 15:", end=' ')
+    Arr = str(digits).split(' ')
+    prev = ""; volume = 1
+    for element in Arr:
+        if prev != element: 
+            prev = element
+            volume = 1
+        else: volume += 1
+
+        if volume == 3: result += 3
+        elif volume > 3: result += 1
+
+    return result
+
+def digionalArr(height, result = "\n"):
+    print("Завдання 16:", end=' ')
+    
+    array = [0] * height
+    for i in range(height): array[i] = [0] * height # створення матриці
+    for i in range(height): array[i][height-i-1] = 1 # права діагональ
+
+    for i in range(height): # двійки
+        array[i][height-i-1] = 1
+        for j in range(height):
+            if i + j >= height: array[i][j] = 2
+
+    for i in array: # виведення матриці
+        for j in i: result += str(j)
+        result += "\n"
+    return result
+
+def symmetricalArray(no = False):
+    array = [
+        [0, 1, 2],
+        [1, 0, 3],
+        [2, 3, 0]
+    ]
+    print("Завдання 17:", end=' ')
+    for i in range(3):
+        for j in range(3):
+            if array[i][j] == array[j][i]: pass
+            else: no = True
+
+    if no == True: return "no"
+    else: return "yes"
+
+def IIcompetition():
+    array = [
+        [3, 1, 2],
+        [1, 3, 4],
+        [3, 3, 3]
+    ]
+    print("Завдання 19:", end=' ')
+    max = 0; coordinations = 0
+    for i in range(3):
+        for j in range(3):
+            if array[i][j] > max:
+                max = array[i][j]
+                coordinations = f"{i} {j}"
+    return f"{max} | {coordinations}"
+
+def IIIcompetition():
+    array = [
+        [1, 5, 7],
+        [1, 3, 5],
+        [4, 1, 6]
+    ]
+    print("Завдання 20:", end=' ')
+
+    max = 0; coordinations = 0
+    for i in range(3):
+        sum = 0
+        for j in range(3): sum += array[i][j]
+        if sum > max: 
+            max = sum
+            coordinations = f"{i}"
+
+    return coordinations
+
+def IVcompetition():
+    array = [
+        [3, 1, 2],
+        [1, 3, 4],
+        [4, 4, 0]
+    ]
+    print("Завдання 21:", end=' ')
+
+    max = 0; winners = 1
+    for i in range(3):
+        sum = 0
+        for j in range(3): sum += array[i][j]
+        if sum > max: 
+            max = sum
+            winners = 1
+        elif sum == max: winners += 1
+
+    return winners
+
+def Vcompetition():
+    array = [
+        [4, 4, 0],
+        [1, 2, 4],
+        [4, 4, 0]
+    ]
+    print("Завдання 22:", end=' ')
+
+    max = 0; winners = 1; coordinations = ""
+    for i in range(3):
+        sum = 0
+        for j in range(3): sum += array[i][j]
+        if sum > max: 
+            max = sum
+            winners = 1
+            coordinations = str(i)
+        elif sum == max: 
+            winners += 1
+            coordinations += f", {i}"
+
+    return f"{winners} | {coordinations}"
 
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     import main
     print("\n| Модулі\n")
     main.ARRAYS()

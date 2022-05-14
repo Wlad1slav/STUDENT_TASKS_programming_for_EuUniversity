@@ -36,4 +36,25 @@ def ARRAYS():
     # Завдання 12 #
     print(al.lineArr(162))
 
+    # Завдання 15 #
+    print(al.balls("5 1 3 3 3 3 1 1 1 2"))
+
+    # Завдання 16 #
+    print(al.digionalArr(6))
+
+    # Завдання 17 #
+    print(al.symmetricalArray())
+
+    # Завдання 19 #
+    print(al.IIcompetition())
+
+    # Завдання 20 #
+    print(al.IIIcompetition())
+
+    # Завдання 21 #
+    print(al.IVcompetition())
+
+    # Завдання 22 #
+    print(al.Vcompetition())
+
 ARRAYS()
