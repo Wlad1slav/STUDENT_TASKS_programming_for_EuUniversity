@@ -242,6 +242,67 @@ def Vcompetition():
 
     return f"{winners} | {coordinations}"
 
+def multiplicationTable(size, result = ""):
+    print("Завдання 23:\n", end='')
+
+    array1 = []
+    for i in range(size): # створення таблиці множення
+        array2 = []
+        for j in range(size): array2.append(i * j)
+        array1.append(array2)
+    
+    for i in array1: # пеереведення масиву в стрінг
+        for j in i: result += f"{j} "
+        result += "\n"
+    
+    return result
+
+def pascalTriangle(size, result = ""):
+    print("Завдання 24:\n", end='')
+
+    array1 = []
+    for i in range(size):
+        array2 = []
+        for j in range(size):
+            if j == 0 or i == 0: array2.append('1')
+            else: array2.append('0')
+        array1.append(array2)
+
+    for i in range(size):
+        for j in range(size):
+            if j != 0 and i != 0: array1[i][j] = f"{int(array1[i-1][j]) + int(array1[i][j-1])}"
+
+    for i in array1:
+        for j in i: result += f"{j} "
+        result += "\n"
+
+    return result
+
+def snake(n, m, result = ""):
+    print("Завдання 26:\n", end='')
+
+    array1 = []; num = 0
+    for i in range(n):
+        array2 = []
+        for j in range(m):
+            array2.append(num)
+            num += 1
+        if i % 2 != 0: array2.reverse()
+        array1.append(array2)
+
+    for i in array1:
+        for j in i: result += f"{j} "
+        result += "\n"
+
+    return result
+
+
+def sapper(day):
+    if day > 0 and day <= 365:
+        
+
+
+
 
 if __name__ == "__main__":
     import main

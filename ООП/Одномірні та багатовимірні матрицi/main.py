@@ -57,4 +57,13 @@ def ARRAYS():
     # Завдання 22 #
     print(al.Vcompetition())
 
+    # Завдання 23 #
+    print(al.multiplicationTable(6))
+
+    # Завдання 24 #
+    print(al.pascalTriangle(3))
+
+    # Завдання 26 #
+    print(al.snake(4, 10))
+
 ARRAYS()
