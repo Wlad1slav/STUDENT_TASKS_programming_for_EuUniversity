@@ -1,5 +1,7 @@
 import arrLib as al
 
+# Виконано 22/33
+
 ##########
 # ARRAYS #
 ##########
@@ -65,5 +67,11 @@ def ARRAYS():
 
     # Завдання 26 #
     print(al.snake(4, 10))
+
+    # Завдання 31 #
+    print(al.calendar(90))
+
+    # Завдання 33 #
+    print(al.daysAfterStartEra())
 
 ARRAYS()

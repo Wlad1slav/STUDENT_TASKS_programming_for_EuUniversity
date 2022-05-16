@@ -296,10 +296,47 @@ def snake(n, m, result = ""):
 
     return result
 
+def calendar(value):
+    print("Завдання 31:", end=' ')
 
-def sapper(day):
-    if day > 0 and day <= 365:
-        
+    if value > 0 and value <= 365:
+        num = 0
+        for month in range(12): # місяць
+            if month == 2-1: days = 28
+            elif month == 4-1 or month == 6-1 or month == 9-1 or month == 11-1: days = 30
+            else: days = 31
+            for day in range(days): # дні
+                num += 1
+                if value == num: return day+1, month+1
+
+def daysAfterStartEra():
+    print("Завдання 33:", end=' ')
+
+    from datetime import datetime
+    date = datetime.now()
+    
+    DATA = {
+        'day': date.day,
+        'month': date.month,
+        'year': date.year
+    }
+
+    jesusBorn = 0
+    for year in range(DATA['year']):
+        if year % 4 == 0 and year % 100 != 0: jesusBorn += 366
+        else: jesusBorn += 365
+
+    for month in range(DATA['month']-1):
+        if month == 2-1 and year % 4 == 0 and year % 100 != 0: jesusBorn += 29
+        elif month == 4-1 or month == 6-1 or month == 9-1 or month == 11-1: jesusBorn += 30
+        elif month == 1-1 or month == 3-1 or month == 5-1 or month == 7-1 or month == 8-1 or month == 10-1 or month == 12-1: jesusBorn += 31
+        else: jesusBorn += 28
+    
+    jesusBorn += DATA["day"]
+
+    return jesusBorn
+
+                    
 
 
 
